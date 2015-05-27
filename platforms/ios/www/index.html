@@ -51,7 +51,7 @@
                     var appId = prompt("Enter FB Application ID", "");
                     facebookConnectPlugin.browserInit(appId);
                 }
-                facebookConnectPlugin.login( ["email"], 
+                facebookConnectPlugin.login( ['public_profile', 'email', 'user_likes', 'user_location', 'user_interests', 'user_education_history'], 
                     function (response) { alert(JSON.stringify(response)) },
                     function (response) { alert(JSON.stringify(response)) });
             }
